@@ -1,4 +1,4 @@
-format: jb-article
+format: jb-book
 root: contents/00_intro.md
-sections:
+chapters:
 - file: contents/01_the_bas.md

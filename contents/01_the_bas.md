@@ -4,15 +4,14 @@ The first people I met were a group of Business Analysts. They worked in the a t
 
 One of them approached me and said:
 
-– Hey... are you the new BA? C'mon here, I'm doing some work that might interest you.
+>– Hey... are you the new BA? C'mon here, I'm doing some work that might interest you.
 
 I sat beside them at a desk. They opened a browser, typed [analytics.platform](http://analytics.platform) and a website loaded, with a slick interface. They clicked a button and a kind of development interface opened. Inside it there was some code.
 
-```{code-block}
+```js
 entity Customer
     attributes:
         name: String;
-        client_since: Date;
 
 entity Widget
     attributes:
@@ -25,8 +24,97 @@ event Click
     clicked: Widget;
 ```
 
-– Take a look – they said – this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.
-
-– This codes defines the most primitive contracts about the data we're going to use today. There are two types of data here: *entities* and *events*. Entities represent static **immutable** information about something. For example, this entity called `Customer` represents a customer's basic immutable information. Check this out...
+>– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
+>
+>– *This codes defines the most primitive contracts about the data we're going to use today. There are two types of data here: **entities** and **events**. Entities represent static **immutable** information about something. For example, this entity called `Customer` represents a customer's basic immutable information. Check this out...*
 
 They clicked on another button and a text field appeared where they wrote a SQL query and some sample data appeared below it.
+
+```{code-block} sql
+---
+caption: |
+    Input here your query...
+---
+SELECT * FROM Customer LIMIT 5;
+```
+
+```{table}
+| `customer_id` | `created_at`            | `name`                    |
+|---------------|-------------------------|---------------------------|
+| 1             | 2018-07-22 13:56:23.128 | "Florence Price"          |
+| 2             | 2017-02-13 08:22:43.231 | "Scott Joplin"            |
+| 3             | 2019-08-05 12:07:06.562 | "George Bridgetower"      |
+| 4             | 2021-02-03 03:12:42.245 | "Samuel Coleridge-Taylor" |
+| 5             | 2020-09-19 22:42:05.523 | "Joseph Bologne"          |
+```
+
+>– All entities have, by default, a unique identifier (customer_id in this case), and a creation date. It could have additional fields, but they have to be stuff that would never change about the entity. For example here are some widgets from our app...
+
+```{code-block} sql
+---
+caption: |
+    Input here your query...
+---
+SELECT * FROM Widget LIMIT 3;
+```
+
+```{table}
+| `widget_id` | `created_at`            | `name`       | `description`                   |
+|-------------|-------------------------|--------------|---------------------------------|
+| 1           | 2021-06-22 13:56:23.128 | "NEW_POST"   | "Button to create new post"     |
+| 2           | 2021-06-22 13:56:23.128 | "ADD_AUTHOR" | "Button that adds a new author" |
+| 3           | 2019-08-05 12:07:06.562 | "LIST_POSTS" | "Button that lists all posts"   |
+```
+
+>– Events on the other hand represent things that happened to entities. They are immutable as well, if an event happened, it happened. It can't unhappen. They also have and unique identifier and a creation date, but more importantly, the have relationships!
+>
+>– What are relationships?
+>
+>– They are stuff that are the entities affected by the event! For example, this event is a click. Every time a user clicks in a widget of the app, a new event is created here. Check this…
+
+
+```{code-block} sql
+---
+caption: |
+    Input here your query...
+---
+SELECT 
+    Customer.customer_id,
+    Widget.name,
+    Click.created_at
+FROM Click(Customer, Widget)
+WHERE Widget.widget_id = 1
+LIMIT 3;
+```
+
+```{table}
+| `Customer.customer_id` | `Widget.name` | `Click.created_at`  |
+|------------------------|---------------|---------------------|
+| 262                    | "NEW_POST"    | 2022-06-01 15:31:32 |
+| 123                    | "NEW_POST"    | 2022-06-01 15:31:53 |
+| 3465                   | "NEW_POST"    | 2022-06-01 15:32:23 |
+| 235                    | "NEW_POST"    | 2022-06-01 15:33:01 |
+```
+
+>– What's that TotalClicks thing?
+>
+>– That's a state, that's a transformation or aggregation indexed by entities. You have to declare what are the entities that index it and how to calculate it. Here, let me show it to you.
+
+```js
+state TotalClicks
+  entities: 
+    Customer; 
+    Widget;
+  
+  fields:
+    totalClicks: Int;
+  
+  batch (clicks: List[Click]) {
+    this.totalClicks = count(clicks);
+  }
+  
+  update (click: Click) {
+    this.totalClicks += 1;
+  }
+```
+
