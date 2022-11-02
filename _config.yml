@@ -3,7 +3,7 @@
 
 title:  Dreams of an Analytics Platform
 author: The Dreamer
-logo: logo.png
+# logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -23,7 +23,9 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/rcalsaverini/dreams  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: main     # Which branch of the repository should be used when creating links (optional)
+  branch: main       # Which branch of the repository should be used when creating links (optional)
+html:
+  use_repository_button: true
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
