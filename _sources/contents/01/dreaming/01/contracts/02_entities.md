@@ -1,6 +1,6 @@
 # Entities
 
-At first I was a bit surprised to see code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:
+At first I was a bit surprised to see the business analysts writing code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:
 
 ```js
 entity Customer
