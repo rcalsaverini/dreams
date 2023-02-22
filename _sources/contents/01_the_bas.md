@@ -1,12 +1,14 @@
 # The Business Analysts
 
-The first people I met were a group of Business Analysts. They worked in the a team that did analytics for the company's app. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers' experience and the company's profits.
+Last night I had a crazy dream. I dreamed about the future, and this document describes what I saw. It wasn't a mystical experience, it was just an Analytics Platform. But it was so easy to use, it made so much sense and it was so useful that I felt it was my obligation to describe it so that we can be inspired by it. I'll describe how I saw people using it in my dream, and what they told me about how it worked.
 
-One of them approached me and said:
+My dream started at an office, with a lot of people working. I was there to start a new job. The first people I met were a group of Business Analysts. One of them approached me and said:
 
->– Hey... are you the new BA? C'mon here, I'm doing some work that might interest you.
+>– *Hey... are you our new hire? I'm doing some work that might interest you...*
 
-I sat beside them at a desk. They opened a browser, typed [analytics.platform](http://analytics.platform) and a website loaded, with a slick interface. They clicked a button and a kind of development interface opened. Inside it there was some code.
+They explained to me that they worked in the a team that did analytics for the company's blog platform product. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers' experience and the company's profits.
+
+I sat beside them at a desk. They opened a browser, typed [analytics.company.com](http://analytics.company.com) and a website loaded, with a slick interface. They clicked somewhere and a kind of development interface opened. Inside it there was some code.
 
 ```js
 entity Customer
@@ -26,7 +28,13 @@ event Click
 
 >– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
 >
->– *This codes defines the most primitive contracts about the data we're going to use today. There are two types of data here: **entities** and **events**. Entities represent static **immutable** information about something. For example, this entity called `Customer` represents a customer's basic immutable information. Check this out...*
+>– *This codes defines the primitive contracts I'm going to use in my analysis: customers, widgets and clicks. Let's focus on the customers and widgets for now. Have you noticed what they have in common?*
+>
+>– *They're both defined with this "entity" keyword.* – I said. – *And they have attributes.*
+>
+>– *Yes, that's right! Entities are one of the basic types of contracts we can use in our analytics platform. They are the things we want to analyse and make decisions about. Entities are **static and immutable**. They are created once and that's it.*
+>
+>– *This entity represents our Customers and what immutable attributes are associated with them. Let me show you...*
 
 They clicked on another button and a text field appeared where they wrote a SQL query and some sample data appeared below it.
 
@@ -49,6 +57,9 @@ SELECT * FROM Customer LIMIT 5;
 ```
 
 >– All entities have, by default, a unique identifier (customer_id in this case), and a creation date. It could have additional fields, but they have to be stuff that would never change about the entity. For example here are some widgets from our app...
+
+There are two types of data here: **entities** and **events**. Entities represent static **immutable** information about something. For example, this entity called `Customer` represents a customer's basic immutable information. Check this out...*
+
 
 ```{code-block} sql
 ---

@@ -294,12 +294,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="the-business-analysts">
 <h1>The Business Analysts<a class="headerlink" href="#the-business-analysts" title="Permalink to this headline">#</a></h1>
-<p>The first people I met were a group of Business Analysts. They worked in the a team that did analytics for the company’s app. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers’ experience and the company’s profits.</p>
-<p>One of them approached me and said:</p>
+<p>Last night I had a crazy dream. I dreamed about the future, and this document describes what I saw. It wasn’t a mystical experience, it was just an Analytics Platform. But it was so easy to use, it made so much sense and it was so useful that I felt it was my obligation to describe it so that we can be inspired by it. I’ll describe how I saw people using it in my dream, and what they told me about how it worked.</p>
+<p>My dream started at an office, with a lot of people working. I was there to start a new job. The first people I met were a group of Business Analysts. One of them approached me and said:</p>
 <blockquote>
-<div><p>– Hey… are you the new BA? C’mon here, I’m doing some work that might interest you.</p>
+<div><p>– <em>Hey… are you our new hire? I’m doing some work that might interest you…</em></p>
 </div></blockquote>
-<p>I sat beside them at a desk. They opened a browser, typed <a class="reference external" href="http://analytics.platform">analytics.platform</a> and a website loaded, with a slick interface. They clicked a button and a kind of development interface opened. Inside it there was some code.</p>
+<p>They explained to me that they worked in the a team that did analytics for the company’s blog platform product. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers’ experience and the company’s profits.</p>
+<p>I sat beside them at a desk. They opened a browser, typed <a class="reference external" href="http://analytics.company.com">analytics.company.com</a> and a website loaded, with a slick interface. They clicked somewhere and a kind of development interface opened. Inside it there was some code.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">entity</span><span class="w"> </span><span class="nx">Customer</span><span class="w"></span>
 <span class="w">    </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
 <span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
@@ -317,7 +318,10 @@ title="Print to PDF"
 </div>
 <blockquote>
 <div><p>– <em>Take a look</em> – they said – <em>this is our analytics platform. This is where we spend most of our time. I’m going to teach you the basics.</em></p>
-<p>– <em>This codes defines the most primitive contracts about the data we’re going to use today. There are two types of data here: <strong>entities</strong> and <strong>events</strong>. Entities represent static <strong>immutable</strong> information about something. For example, this entity called <code class="docutils literal notranslate"><span class="pre">Customer</span></code> represents a customer’s basic immutable information. Check this out…</em></p>
+<p>– <em>This codes defines the primitive contracts I’m going to use in my analysis: customers, widgets and clicks. Let’s focus on the customers and widgets for now. Have you noticed what they have in common?</em></p>
+<p>– <em>They’re both defined with this “entity” keyword.</em> – I said. – <em>And they have attributes.</em></p>
+<p>– <em>Yes, that’s right! Entities are one of the basic types of contracts we can use in our analytics platform. They are the things we want to analyse and make decisions about. Entities are <strong>static and immutable</strong>. They are created once and that’s it.</em></p>
+<p>– <em>This entity represents our Customers and what immutable attributes are associated with them. Let me show you…</em></p>
 </div></blockquote>
 <p>They clicked on another button and a text field appeared where they wrote a SQL query and some sample data appeared below it.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
@@ -359,6 +363,7 @@ title="Print to PDF"
 <blockquote>
 <div><p>– All entities have, by default, a unique identifier (customer_id in this case), and a creation date. It could have additional fields, but they have to be stuff that would never change about the entity. For example here are some widgets from our app…</p>
 </div></blockquote>
+<p>There are two types of data here: <strong>entities</strong> and <strong>events</strong>. Entities represent static <strong>immutable</strong> information about something. For example, this entity called <code class="docutils literal notranslate"><span class="pre">Customer</span></code> represents a customer’s basic immutable information. Check this out…*</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">Input here your query…</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Widget</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
