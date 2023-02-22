@@ -1,5 +1,9 @@
 # Code samples
 
+:::{warning}
+Ignore this for now. I was just testing the highlighting.
+:::
+
 ## Tuples
 
 ```haskell
