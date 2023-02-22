@@ -1,7 +1,5 @@
 # The Business Analysts
 
-Last night I had a crazy dream. I dreamed about the future, and this document describes what I saw. It wasn't a mystical experience, it was just an Analytics Platform. But it was so easy to use, it made so much sense and it was so useful that I felt it was my obligation to describe it so that we can be inspired by it. I'll describe how I saw people using it in my dream, and what they told me about how it worked.
-
 My dream started at an office, with a lot of people working. I was there to start a new job. The first people I met were a group of Business Analysts. One of them approached me and said:
 
 >– *Hey... are you our new hire? I'm doing some work that might interest you...*
