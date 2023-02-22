@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Business Analysts" href="01_the_bas.html" />
+    <link rel="next" title="Where does it start?" href="01/dreaming/00_where_does_it_start.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,10 +107,54 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Dreams of an Analytics Platform
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="01/dreaming/00_where_does_it_start.html">
+   Starting Anew.
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01/dreaming/01/contracts/01_meeting_the_business_analysts.html">
+     The Business Analysts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01/dreaming/01/contracts/02_entities.html">
+     Entities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01/dreaming/01/contracts/03_events.html">
+     Events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01/dreaming/01/contracts/04_data_sources.html">
+     Data Sources
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The AnaLog Language
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_the_bas.html">
-   The Business Analysts
+  <a class="reference internal" href="02/language/01_code_samples.html">
+   Code samples
   </a>
  </li>
 </ul>
@@ -268,12 +312,48 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-did-you-wrote-this">
+   Why did you wrote this?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-this-for">
+   Who is this for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-of-the-book">
+   Structure of the Book
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -285,6 +365,31 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-did-you-wrote-this">
+   Why did you wrote this?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-this-for">
+   Who is this for?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-of-the-book">
+   Structure of the Book
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -295,11 +400,35 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="dreams-of-an-analytics-platform">
 <h1>Dreams of an Analytics Platform<a class="headerlink" href="#dreams-of-an-analytics-platform" title="Permalink to this headline">#</a></h1>
 <p>Last night I had a crazy dream. I dreamed about the future, and this document describes what I saw. It wasn’t a mystical experience, it was just an Analytics Platform. But it was so easy to use, it made so much sense and it was so useful that I felt it was my obligation to describe it so that we can be inspired by it. I’ll describe how I saw people using it in my dream, and what they told me about how it worked.</p>
+<section id="why-did-you-wrote-this">
+<h2>Why did you wrote this?<a class="headerlink" href="#why-did-you-wrote-this" title="Permalink to this headline">#</a></h2>
+<p>This is an experiment and work in progress. I believe that software needs to be idealized and designed with a strong vision of what the end user needs, and it is my perception that current data platforms are not built this way. They are usually thought from the perspective of the backend engineers that needs to solve a problem. In this process usability and jobs the user needs to do are frequently relegated to afterthoughts. Because of this I decided to write about what I, both as an end user of an analytics platform and a software engineer, would like to see in a perfect world.</p>
+</section>
+<section id="who-is-this-for">
+<h2>Who is this for?<a class="headerlink" href="#who-is-this-for" title="Permalink to this headline">#</a></h2>
+<p>Anyone interested in how to build a better analytics platform. This is a work in progress, and I’m not sure if it will ever be finished. I’m writing it as I go, and I’m writing it for myself. I’m writing it because I want to understand what I saw in my dream, and I want to understand how we can build it in real life. I’m writing it because I want to learn from the dream.</p>
+</section>
+<section id="structure-of-the-book">
+<h2>Structure of the Book<a class="headerlink" href="#structure-of-the-book" title="Permalink to this headline">#</a></h2>
+<p>This book is divided into three parts:</p>
+<ul class="simple">
+<li><p><strong>Dreaming</strong>. This is where I describe my dream. I’ll describe how I saw people using the Analytics Platform in my dream, and what they told me about how it worked.</p></li>
+<li><p><strong>The AnaLog Language</strong> This is where I describe the language used in the day-to-day of analysts using the Platform.</p></li>
+<li><p><strong>Building</strong>. This is where I describe how we can build the Analytics Platform. I’ll describe how we can build the Analytics Platform in real life, and what we can learn from the dream.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dreams of an Analytics Platform</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="01_the_bas.html">The Business Analysts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01/dreaming/00_where_does_it_start.html">Starting Anew.</a></li>
 </ul>
 </div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The AnaLog Language</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="02/language/01_code_samples.html">Code samples</a></li>
+</ul>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -329,10 +458,10 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="01_the_bas.html" title="next page">
+    <a class='right-next' id="next-link" href="01/dreaming/00_where_does_it_start.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Business Analysts</p>
+        <p class="prev-next-title">Where does it start?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
