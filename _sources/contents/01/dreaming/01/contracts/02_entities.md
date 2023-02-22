@@ -15,7 +15,7 @@ entity Widget
 
 >– *This is the code we used to define the objects we're dealing with on the platform. This language is called AnaLog.* – they said. – *It's a bit like a programming language but is a very minimal one.*
 >
->– *Do you use it write the code that runs the platform?* – I asked.
+>– *Is this how you write the code that runs the platform?* – I asked.
 >
 >– *Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how it will produce new data assets from it. Don't worry, I'll explain everything.*
 
