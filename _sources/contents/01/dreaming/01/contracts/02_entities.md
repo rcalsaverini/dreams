@@ -17,7 +17,7 @@ entity Widget
 >
 >– *Is this how you write the code that runs the platform?* – I asked.
 >
->– *Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how it will produce new data assets from it. Don't worry, I'll explain everything.*
+>– *Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how to produce new data assets from them. Don't worry, I'll explain everything.*
 
 ## What is an Entity?
 
