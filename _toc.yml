@@ -8,7 +8,7 @@ parts:
       - file: contents/01/dreaming/01/contracts/01_meeting_the_business_analysts.md
       - file: contents/01/dreaming/01/contracts/02_entities.md
       - file: contents/01/dreaming/01/contracts/03_events.md
-      - file: contents/01/dreaming/01/contracts/04_data_sources.md
+      - file: contents/01/dreaming/01/contracts/04_state_and_tracking_change.md
   - caption: The AnaLog Language
     chapters:
     - file: contents/02/language/01_code_samples.md
