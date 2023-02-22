@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Sources &#8212; Dreams of an Analytics Platform</title>
+    <title>State and tracking change &#8212; Dreams of an Analytics Platform</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -116,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../00_where_does_it_start.html">
-   Starting Anew.
+   Where does it start?
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -141,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Data Sources
+     State and tracking change
     </a>
    </li>
   </ul>
@@ -248,7 +248,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/rcalsaverini/dreams/issues/new?title=Issue%20on%20page%20%2Fcontents/01/dreaming/01/contracts/04_data_sources.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/rcalsaverini/dreams/issues/new?title=Issue%20on%20page%20%2Fcontents/01/dreaming/01/contracts/04_state_and_tracking_change.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -276,7 +276,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../../../_sources/contents/01/dreaming/01/contracts/04_data_sources.md"
+        <a href="../../../../../_sources/contents/01/dreaming/01/contracts/04_state_and_tracking_change.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -313,60 +313,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-all-the-data-comes-from">
-   Where all the data comes from?
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Sources</h1>
+                <h1>State and tracking change</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-all-the-data-comes-from">
-   Where all the data comes from?
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -374,12 +337,54 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-sources">
-<h1>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h1>
-<section id="where-all-the-data-comes-from">
-<h2>Where all the data comes from?<a class="headerlink" href="#where-all-the-data-comes-from" title="Permalink to this headline">#</a></h2>
-<p>There are two types of data here: <strong>entities</strong> and <strong>events</strong>. Entities represent static <strong>immutable</strong> information about something. For example, this entity called <code class="docutils literal notranslate"><span class="pre">Customer</span></code> represents a customer’s basic immutable information. Check this out…</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="state-and-tracking-change">
+<h1>State and tracking change<a class="headerlink" href="#state-and-tracking-change" title="Permalink to this headline">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a draft. It’s not finished yet.</p>
+</div>
+<blockquote>
+<div><p>– Ok, so let’s talk about Event and State contracts now. You mentioned before that these are used for things that change, right?</p>
+<p>– Exactly. When we want to track changes in our data, we use these contracts.</p>
+<p>– And how do they work?</p>
+<p>– Let me show you an example. This is an Event contract that I just wrote:</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">event</span><span class="w"> </span><span class="nx">Click</span><span class="w"> </span>
+<span class="w">  </span><span class="nx">entities</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">clicker</span><span class="o">:</span><span class="w"> </span><span class="nx">Customer</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">clicked</span><span class="o">:</span><span class="w"> </span><span class="nx">Widget</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>– So, this event is called Click, and it involves two entities: clicker and clicked. The clicker is a Customer entity, and the clicked is a Widget entity. Whenever someone clicks on a widget, we want to capture that event and record who clicked and what widget was clicked.</p>
+<p>– That makes sense. But how do we keep track of all those clicks?</p>
+<p>– That’s where the State contract comes in. Let me show you an example of a State contract that tracks the total number of clicks for each customer and widget:</p>
+</div></blockquote>
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="w"> </span><span class="n">TotalClicks</span><span class="w"></span>
+<span class="w">  </span><span class="n">entities</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Customer</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Widget</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">fields</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">totalClicks</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">batch</span><span class="w"> </span><span class="p">(</span><span class="n">clicks</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">Click</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">totalClicks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="n">clicks</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">update</span><span class="w"> </span><span class="p">(</span><span class="n">click</span><span class="p">:</span><span class="w"> </span><span class="n">Click</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">totalClicks</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>– So, this state contract is called TotalClicks, and it involves two entities: Customer and Widget. It also has a field called totalClicks, which is an integer that keeps track of the total number of clicks for each customer and widget.</p>
+<p>– I see. And how does it work?</p>
+<p>– The State contract has two methods: batch and update. The batch method is used to initialize the state with a batch of events, and the update method is used to update the state when a new event occurs.</p>
+<p>– So, in this example, the batch method takes a list of Click events and initializes the totalClicks field for each customer and widget. The update method is called every time a new Click event occurs, and it increments the totalClicks field for the customer and widget associated with that event.</p>
+<p>– That’s really cool! So we can use Event and State contracts to keep track of any kind of change in our data.</p>
+<p>– Yes, that’s right. And the best part is that the Analytics Platform takes care of all the heavy lifting. We just need to define the contracts, and the platform will take care of processing the data and keeping the state up-to-date.</p>
+</div></blockquote>
 </section>
 
     <script type="text/x-thebe-config">
