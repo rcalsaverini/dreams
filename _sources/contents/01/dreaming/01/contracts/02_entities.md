@@ -48,7 +48,7 @@ SELECT * FROM Customer LIMIT 5;
 
 > – _Wait... is this SQL?_ – I asked – _I thought you said this was not a query language._
 >
-> – _Yes. The platform work like this: we tell the platform where data is, what primitive data exists, and so one, by defining contracts in AnaLog.The platform runs those contracts and produces data assets which are like tables. We can then query those tables using our simplified flavour of SQL._
+> – _Yes. Entities work like this: we tell the platform where the data for the entities is, and what structure it has by defining contracts in AnaLog. The platform then runs those contracts and produces queriable data assets, which are like SQL tables. We can query those tables using our simplified flavour of SQL._
 >
 > – _Oh, I see... so, the Customer entity is used to produce this table. Is it like a schema definition?_
 >
