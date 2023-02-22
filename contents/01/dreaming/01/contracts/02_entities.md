@@ -4,20 +4,20 @@ At first I was a bit surprised to see code, but then I realised that this was so
 
 ```js
 entity Customer
-    attributes:
-        name: String;
+  attributes:
+      name: String;
 
 entity Widget
-    attributes:
-        name: String;
-        description: Text;
+  attributes:
+    name: String;
+    description: Text;
 ```
 
 >– *This is the code we used to define the objects we're dealing with on the platform. This language is called AnaLog.* – they said. – *It's a bit like a programming language but is a very minimal one.*
 >
->– *Do you use it write the code that runs the platform?* – I asked.
+>– *Is this how you write the code that runs the platform?* – I asked.
 >
->– *Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how it will produce new data assets from it. Don't worry, I'll explain everything.*
+>– *Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how to produce new data assets from them. Don't worry, I'll explain everything.*
 
 ## What is an Entity?
 
@@ -53,3 +53,29 @@ They clicked somewhere else and a new window appeared, with a field where they w
 >– *Oh, I see... so, the Customer entity is used to produce this table. Is it like a schema definition?*
 >
 >– *Yes, entity contracts are a bit like a schema, but there are more complex contracts as well. The platform will use this contract to produce a table with the data we need. Our system separates the concerns of declaring data and its transformations that will be ran by the platform from the concern of running queries for analytical purposes. SQL is great for queries, there's no reason to change that! But to describe how datasets are produced it's a bit too powerful. We'd rather have a very strict control of **what kinds** of queries people can run to create datasets. This allows us to control the complexity of the system.*
+
+## Where does the data come from?
+
+>– *So, this is how we define the shape of the data we want to analyse. But where does the data come from?*
+>
+>– *That's a good question. I'm not a specialist, and you can talk to our Analytics Engineer later to get more details, but when I declare an entity I can also say to it where do the data for that schema comes from, look...*
+
+```js
+entity Customers2022
+  source:
+    type: "files"
+    extension: "parquet"
+    location: "s3:///customers/snapshot/2022/"
+  attributes:
+      name: String;
+```
+
+>– *This is a static snapshot of our customers in 2022. It's a bunch of parquet files on S3. I just declared a new entity using this and added a source block indicating where I want the data to be fetched from.*
+>
+>– *But why the other entity doesn't have a source block?*
+>
+>– *We have a bunch of standards already declared somewhere else. The data for that entity comes from our live databases. Depending on the configurations the platform already knows where the data comes from. This makes our lives easier.*
+>
+>– *And what types of sources can it use?*
+>
+>– *Oh boy... just about anything. We have data that's read from Kafka streams, from databases, from files, pulling data periodically from APIs, and so on. The platform is very flexible in that regard.*
