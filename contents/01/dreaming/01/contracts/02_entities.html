@@ -340,6 +340,11 @@ title="Print to PDF"
    What is an Entity?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+   Where does the data come from?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -364,6 +369,11 @@ title="Print to PDF"
    What is an Entity?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-does-the-data-come-from">
+   Where does the data come from?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -378,13 +388,13 @@ title="Print to PDF"
 <h1>Entities<a class="headerlink" href="#entities" title="Permalink to this headline">#</a></h1>
 <p>At first I was a bit surprised to see code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">entity</span><span class="w"> </span><span class="nx">Customer</span><span class="w"></span>
-<span class="w">    </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
 
 <span class="nx">entity</span><span class="w"> </span><span class="nx">Widget</span><span class="w"></span>
-<span class="w">    </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="nx">Text</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="nx">Text</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <blockquote>
@@ -442,6 +452,29 @@ title="Print to PDF"
 <p>– <em>Yes. The platform work like this: we tell the platform where data is, what primitive data exists, and so one, by defining contracts in AnaLog.The platform runs those contracts and produces data assets which are like tables. We can then query those tables using our simplified flavour of SQL.</em></p>
 <p>– <em>Oh, I see… so, the Customer entity is used to produce this table. Is it like a schema definition?</em></p>
 <p>– <em>Yes, entity contracts are a bit like a schema, but there are more complex contracts as well. The platform will use this contract to produce a table with the data we need. Our system separates the concerns of declaring data and its transformations that will be ran by the platform from the concern of running queries for analytical purposes. SQL is great for queries, there’s no reason to change that! But to describe how datasets are produced it’s a bit too powerful. We’d rather have a very strict control of <strong>what kinds</strong> of queries people can run to create datasets. This allows us to control the complexity of the system.</em></p>
+</div></blockquote>
+</section>
+<section id="where-does-the-data-come-from">
+<h2>Where does the data come from?<a class="headerlink" href="#where-does-the-data-come-from" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>– <em>So, this is how we define the shape of the data we want to analyse. But where does the data come from?</em></p>
+<p>– <em>That’s a good question. I’m not a specialist, and you can talk to our Analytics Engineer later to get more details, but when I declare an entity I can also say to it where do the data for that schema comes from, look…</em></p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">entity</span><span class="w"> </span><span class="nx">Customers2022</span><span class="w"></span>
+<span class="w">  </span><span class="nx">source</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;files&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">extension</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;parquet&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">location</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;s3:///customers/snapshot/2022/&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>– <em>This is a static snapshot of our customers in 2022. It’s a bunch of parquet files on S3. I just declared a new entity using this and added a source block indicating where I want the data to be fetched from.</em></p>
+<p>– <em>But why the other entity doesn’t have a source block?</em></p>
+<p>– <em>We have a bunch of standards already declared somewhere else. The data for that entity comes from our live databases. Depending on the configurations the platform already knows where the data comes from. This makes our lives easier.</em></p>
+<p>– <em>And what types of sources can it use?</em></p>
+<p>– <em>Oh boy… just about anything. We have data that’s read from Kafka streams, from databases, from files, pulling data periodically from APIs, and so on. The platform is very flexible in that regard.</em></p>
 </div></blockquote>
 </section>
 </section>
