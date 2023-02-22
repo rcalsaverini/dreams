@@ -22,6 +22,22 @@ event Click
   entities:
     clicker: Customer;
     clicked: Widget;
+
+state TotalClicks
+  entities:
+    Customer;
+    Widget;
+
+  fields:
+    totalClicks: Int;
+
+  batch (clicks: List[Click]) {
+    this.totalClicks = count(clicks);
+  }
+
+  update (click: Click) {
+    this.totalClicks += 1;
+  }
 ```
 
 >– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
