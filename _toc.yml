@@ -1,4 +1,15 @@
 format: jb-book
 root: contents/00_intro.md
-chapters:
-- file: contents/01_the_bas.md
+parts:
+  - caption: Dreams of an Analytics Platform
+    chapters:
+    - file: contents/01/dreaming/00_first_day_at_a_new_company.md
+      title: First Day at a New Company
+      sections:
+      - file: contents/01/dreaming/01/contracts/01_meeting_the_business_analysts.md
+      - file: contents/01/dreaming/01/contracts/02_entities.md
+      - file: contents/01/dreaming/01/contracts/03_events.md
+      - file: contents/01/dreaming/01/contracts/04_data_sources.md
+  - caption: The AnaLog Language
+    chapters:
+    - file: contents/02/language/01_code_samples.md
