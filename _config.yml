@@ -3,7 +3,7 @@
 
 title:  Dreams of an Analytics Platform
 author: The Dreamer
-# logo: logo.png
+logo: images/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

@@ -1,5 +1,7 @@
 # Entities
 
+
+
 At first I was a bit surprised to see the business analysts writing code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:
 
 ```js
@@ -18,6 +20,13 @@ entity Widget
 > – _Is this how you write the code that runs the platform?_ – I asked.
 >
 > – _Not really... it's not a query language, neither it's used to code the platform itself. It's more of a language for declaring what data assets exists and how to produce new data assets from them. Don't worry, I'll explain everything._
+
+:::{image} /images/entities.png
+:alt: What is an Entity?
+:width: 320px
+:class: bg-primary mb-1
+:align: right
+:::
 
 ## What is an Entity?
 

@@ -1,8 +1,19 @@
 # The Business Analysts
 
+:::{image} /images/bas.png
+:alt: Meeting the Business Analysts
+:width: 320px
+:class: bg-primary mb-1
+:align: right
+:::
+
 The first people I met were a team of Business Analysts. One of them approached me and said:
 
->– *Hey... are you our new hire? I'm doing some work that might interest you...*
+>– *Hey... are you our new hire?*
+>
+>– *Yes, I am. I'm the new platform engineer!*
+>
+>– *Great! I'm doing some work using the Analytics Platform! That might interest you...*
 
 They explained to me that they worked in the a team that did analytics for the company's blog platform product. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers' experience and the company's profits.
 
@@ -41,3 +52,5 @@ state TotalClicks
 ```
 
 >– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
+
+
