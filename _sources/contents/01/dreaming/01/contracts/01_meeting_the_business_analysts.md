@@ -19,7 +19,7 @@ They explained to me that they worked in the a team that did analytics for the c
 
 I sat beside them at a desk. They opened a browser, typed [analytics.company.com](http://analytics.company.com) and a website loaded, with a slick interface. They clicked somewhere and a kind of development interface opened. Inside it there was some code.
 
-```js
+:::{code-block} js
 entity Customer
     attributes:
         name: String;
@@ -49,8 +49,6 @@ state TotalClicks
   update (click: Click) {
     this.totalClicks += 1;
   }
-```
+:::
 
 >– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
-
-

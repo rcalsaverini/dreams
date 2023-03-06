@@ -94,7 +94,7 @@ SELECT * FROM Widget LIMIT 3;
 >
 > – _That's a good question. I'm not a specialist, and you can talk to our Analytics Engineer later to get more details, but when I declare an entity I can also say to it where do the data for that schema comes from, look..._
 
-```js
+:::{code-block} js
 entity Customers2022
   source:
     type: "files"
@@ -102,7 +102,7 @@ entity Customers2022
     location: "s3:///customers/snapshot/2022/"
   attributes:
       name: String;
-```
+:::
 
 > – _This is a static snapshot of our customers in 2022. It's a bunch of parquet files on S3. I just declared a new entity using this and added a source block indicating where I want the data to be fetched from._
 >

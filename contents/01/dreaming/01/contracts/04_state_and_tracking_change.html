@@ -349,6 +349,27 @@ title="Print to PDF"
 <p>This is a draft. It’s not finished yet.</p>
 </div>
 <blockquote>
+<div><p>– What’s that TotalClicks thing?</p>
+<p>– That’s a state, that’s a transformation or aggregation indexed by entities. You have to declare what are the entities that index it and how to calculate it. Here, let me show it to you.</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">state</span><span class="w"> </span><span class="nx">TotalClicks</span><span class="w"></span>
+<span class="w">  </span><span class="nx">entities</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Customer</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Widget</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">fields</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">totalClicks</span><span class="o">:</span><span class="w"> </span><span class="nx">Int</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">batch</span><span class="w"> </span><span class="p">(</span><span class="nx">clicks</span><span class="o">:</span><span class="w"> </span><span class="nx">List</span><span class="p">[</span><span class="nx">Click</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">totalClicks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">count</span><span class="p">(</span><span class="nx">clicks</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">update</span><span class="w"> </span><span class="p">(</span><span class="nx">click</span><span class="o">:</span><span class="w"> </span><span class="nx">Click</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">totalClicks</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<blockquote>
 <div><p>– Ok, so let’s talk about Event and State contracts now. You mentioned before that these are used for things that change, right?</p>
 <p>– Exactly. When we want to track changes in our data, we use these contracts.</p>
 <p>– And how do they work?</p>
