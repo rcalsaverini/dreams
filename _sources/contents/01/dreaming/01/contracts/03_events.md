@@ -61,17 +61,17 @@ event PageLoaded:
 
 ::::{admonition} Querying attributes.
 :::{code-block} sql
-SELECT customer.customer_id, page.name, referrer, user_agent, created_at
+SELECT customer.customer_id, referrer, created_at
 FROM PageLoaded(user, page)
 WHERE page.type = "home"
 LIMIT 3;
 :::
 :::{table}
-| `customer.customer_id` | `page.name` | `referrer`                                            | `user_agent`                                                                                                            | `created_at`        |
-|------------------------|-------------|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------------|
-| 123                    | "home"      | `"<https://www.google.com/search?q=best+blog+tool+ever>"` | "Mozilla/5.0 (PlayStation 5/SmartTV) AppleWebKit/605.1.15 (KHTML, like Gecko)"                                          | 2022-06-01 15:31:32 |
-| 3465                   | "home"      | `"<https://www.google.com/search?q=I+want+to+blog>"`      | "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" | 2022-06-01 15:31:53 |
-| 235                    | "home"      | `"<https://fulano.blog.com/new-cool-blogging-tool>"`      | "Mozilla/5.0 (X11; Linux i686; rv:45.0) Gecko/20100101 Icedove/45.6.0"                                                  | 2022-06-01 15:32:23 |
+| `customer.customer_id` | `referrer`                                                | `created_at`        |
+|------------------------|-----------------------------------------------------------|---------------------|
+| 123                    | `"<https://www.google.com/search?q=best+blog+tool+ever>"` | 2022-06-01 15:31:32 |
+| 3465                   | `"<https://www.google.com/search?q=I+want+to+blog>"`      | 2022-06-01 15:31:53 |
+| 235                    | `"<https://fulano.blog.com/new-cool-blogging-tool>"`      | 2022-06-01 15:32:23 |
 :::
 ::::
 
