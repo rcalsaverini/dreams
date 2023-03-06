@@ -1,9 +1,5 @@
 # Events
 
-:::{warning}
-This is a draft. It's not finished yet.
-:::
-
 ## What is an Event?
 
 > – *What about that events thing?*
@@ -105,7 +101,7 @@ LIMIT 3;
 >
 > – *I see! You don't use explicit joins in the contracts also, right?*
 >
-> Nope! There are no ways of defining explicit joins when defining the data assets. The idea of AnaLog is that if I need a different view of the data, with different joins, I create a new data asset. That way we limit how expensive are the datasets created by the users. It's a limitation, but it's not a severe one. On most cases business analysts like us don't need overly complicated queries. And you'll see that States solve most of the problems we have.
+> – *Nope! There are no ways of defining explicit joins when defining the data assets. The idea of AnaLog is that if I need a different view of the data, with different joins, I create a new data asset. That way we limit how expensive are the datasets created by the users. It's a limitation, but it's not a severe one. On most cases business analysts like us don't need overly complicated queries. And you'll see that States solve most of the problems we have.*
 >
 > – *What about left joins?*
 >
