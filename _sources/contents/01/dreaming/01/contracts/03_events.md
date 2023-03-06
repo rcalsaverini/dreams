@@ -24,7 +24,7 @@ event Click
 :::{code-block} sql
 SELECT clicker.customer_id, clicked.name, created_at
 FROM Click(clicker, clicked)
-WHERE Widget.widget_id = 1
+WHERE clicked.widget_id = 1
 LIMIT 3;
 :::
 :::{table}
