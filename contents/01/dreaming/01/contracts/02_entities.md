@@ -1,10 +1,8 @@
 # Entities
 
-
-
 At first I was a bit surprised to see the business analysts writing code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:
 
-```js
+:::{code-block} js
 entity Customer
   attributes:
       name: String;
@@ -13,7 +11,7 @@ entity Widget
   attributes:
     name: String;
     description: Text;
-```
+:::
 
 > – _This is the code we used to define the objects we're dealing with on the platform. This language is called AnaLog._ – they said. – _It's a bit like a programming language but is a very minimal one._
 >
