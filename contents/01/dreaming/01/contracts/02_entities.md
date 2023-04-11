@@ -63,7 +63,7 @@ SELECT * FROM Customer LIMIT 5;
 
 ## What is an Attribute?
 
-> – All entities have, by default, a unique identifier (`customer_id` in the case above) and a creation date (`created_at`). You don't need to declare those fields if they follow the naming conventions. The other fields are what we call **attributes**. They are basic information about an entity, stuff that would never change about it. For example here are some widgets from our blog platform...
+> – _All entities have, by default, a unique identifier (`customer_id` in the case above) and a creation date (`created_at`). You don't need to declare those fields if they follow the naming conventions. The other fields are what we call **attributes**. They are basic information about an entity, stuff that would never change about it. For example here are some widgets from our blog platform..._
 
 ::::{admonition} Querying entities.
 :::{code-block} sql
