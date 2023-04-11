@@ -7,17 +7,17 @@
 :align: right
 :::
 
-The first people I met were a team of Business Analysts. One of them approached me and said:
+Upon my arrival, I was greeted by a team of Business Analysts. One of them approached me with a warm smile and said:
 
->– *Hey... are you our new hire?*
+> – *Hey... are you our new hire?*
 >
->– *Yes, I am. I'm the new platform engineer!*
+> – *Yes, I am. I'm the new platform engineer!*
 >
->– *Great! I'm doing some work using the Analytics Platform! That might interest you...*
+> – *Great! I'm working on some projects using the Analytics Platform! That might interest you...*
 
-They explained to me that they worked in the a team that did analytics for the company's blog platform product. All the time they needed to analyse how well their UX experiments went, and what the impact of the new designs and features had on their customers' experience and the company's profits.
+The team explained that they were responsible for analytics related to the company's blog platform product. Their work involved analyzing the effectiveness of UX experiments, as well as assessing the impact of new designs and features on customer experience and company profits.
 
-I sat beside them at a desk. They opened a browser, typed [analytics.company.com](http://analytics.company.com) and a website loaded, with a slick interface. They clicked somewhere and a kind of development interface opened. Inside it there was some code.
+I took a seat beside them at a desk. They opened a web browser, typed [analytics.company.com](/#), and a sleek website loaded. After a few clicks, a development interface appeared on the screen, displaying some code.
 
 :::{code-block} js
 entity Customer
@@ -29,7 +29,7 @@ entity Widget
         name: String;
         description: Text;
 
-event Click 
+event Click
   entities:
     clicker: Customer;
     clicked: Widget;
@@ -51,4 +51,4 @@ state TotalClicks
   }
 :::
 
->– *Take a look* – they said – *this is our analytics platform. This is where we spend most of our time. I'm going to teach you the basics.*
+> – *Take a look,* – they said – *this is our analytics platform. This is where we spend most of our time. Let me show you the basics.*
