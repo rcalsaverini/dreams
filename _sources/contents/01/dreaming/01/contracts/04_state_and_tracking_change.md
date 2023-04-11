@@ -4,9 +4,6 @@
 This is a draft. It's not finished yet.
 :::
 
-
-
-
 > – What's that TotalClicks thing?
 >
 > – That's a state, that's a transformation or aggregation indexed by entities. You have to declare what are the entities that index it and how to calculate it. Here, let me show it to you.

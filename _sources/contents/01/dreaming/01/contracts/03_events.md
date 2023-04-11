@@ -2,7 +2,7 @@
 
 ## What is an Event?
 
-> – *What about that events thing?*
+> – *What about those event thingies?*
 >
 > – *Alright, let's talk about events! Events represent things that happened to entities. They are immutable as well. If an event happened, it happened. It can't unhappen. They also have and unique identifier and a creation date, but more importantly, the have relationships!*
 >
