@@ -395,8 +395,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 <blockquote>
-<div><p>– What are relationships?</p>
-<p>– They are the entities affected by the event. For example, this event is a click. Every time a user clicks in a widget of the app, a new event is created here. Check this…</p>
+<div><p>– <em>What are relationships?</em></p>
+<p>– <em>They are the entities affected by the event. For example, this event is a click. Every time a user clicks in a widget of the app, a new event is created here. Check this…</em></p>
 </div></blockquote>
 <div class="admonition-querying-entities admonition">
 <p class="admonition-title">Querying entities.</p>
@@ -438,7 +438,22 @@ title="Print to PDF"
 <p>– <em>Oh, so the relationships are like joins with the entities affected by a given event?</em></p>
 <p>– <em>Exactly! And the contract metadata informs the platform what the relationships, and the platform itself decides what to do in the background. I don’t have to worry if it’s a join or a materialized view.</em></p>
 <p>– <em>Can events have other kids of information? Like attributes?</em></p>
-<p>– *Yes! Events can have attributes. Take a look:</p>
+<p>– _Yes! Events can have attributes. Take a look:_At first I was a bit surprised to see the business analysts writing code, but then I realised that this was somehow defining the basic objects they were going to use to do their analysis. They asked me to focus on the two first blocks of code:</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">entity</span><span class="w"> </span><span class="nx">Customer</span><span class="w"></span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
+
+<span class="nx">entity</span><span class="w"> </span><span class="nx">Widget</span><span class="w"></span>
+<span class="w">  </span><span class="nx">attributes</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="nx">Text</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>– <em>This is the code we used to define the objects we’re dealing with on the platform. This language is called AnaLog.</em> – they said. – <em>It’s a bit like a programming language but is a very minimal one.</em></p>
+<p>– <em>Is this how you write the code that runs the platform?</em> – I asked.</p>
+<p>– <em>Not really… it’s not a query language, neither it’s used to code the platform itself. It’s more of a language for declaring what data assets exists and how to produce new data assets from them. Don’t worry, I’ll explain everything.</em></p>
 </div></blockquote>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">event</span><span class="w"> </span><span class="nx">PageLoaded</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="nx">entities</span><span class="o">:</span><span class="w"></span>
@@ -486,7 +501,7 @@ title="Print to PDF"
 <blockquote>
 <div><p>– <em>Notice that I can query the attributes of the event as well.</em></p>
 <p>– <em>That’s cool! Can you do joins that are not declared in the event’s contract?</em></p>
-<p>– I can do explicit joins when <em>querying</em> the data after it was processed by the ETL.  I can do it like this:</p>
+<p>– <em>I can do explicit joins when <strong>querying</strong> the data after it was processed by the ETL.  I can do it like this:</em></p>
 </div></blockquote>
 <div class="admonition-querying-with-explicit-joins admonition">
 <p class="admonition-title">Querying with explicit joins.</p>
@@ -569,7 +584,7 @@ title="Print to PDF"
 <blockquote>
 <div><p>– <em>Notice that the <code class="docutils literal notranslate"><span class="pre">referrer</span></code> column is nullable. That’s because the relationship is optional. If there is no referrer, the column will be null, just like a left join.</em></p>
 <p>– <em>That’s cool! What about the state stuff? I saw some more involved code there… What is it for?</em></p>
-<p>– *Yeah, it’s time to talk about states. They are the secret sauce of this platform.”</p>
+<p>– <em>Yeah, it’s time to talk about states. They are the secret sauce of this platform.”</em></p>
 </div></blockquote>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">

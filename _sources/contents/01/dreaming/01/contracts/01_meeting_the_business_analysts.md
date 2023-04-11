@@ -9,11 +9,11 @@
 
 Upon my arrival, I was greeted by a team of Business Analysts. One of them approached me with a warm smile and said:
 
-> – *Hey... are you our new hire?*
+> – _Hey... are you our new hire?_
 >
-> – *Yes, I am. I'm the new platform engineer!*
+> – _Yes, I am. I'm the new platform engineer!_
 >
-> – *Great! I'm working on some projects using the Analytics Platform! That might interest you...*
+> – _Great! I'm working on some projects using the Analytics Platform! That might interest you..._
 
 The team explained that they were responsible for analytics related to the company's blog platform product. Their work involved analyzing the effectiveness of UX experiments, as well as assessing the impact of new designs and features on customer experience and company profits.
 
@@ -51,4 +51,4 @@ state TotalClicks
   }
 :::
 
-> – *Take a look,* – they said – *this is our analytics platform. This is where we spend most of our time. Let me show you the basics.*
+> – _Take a look,_ – they said – _this is our analytics platform. This is where we spend most of our time. Let me show you the basics._
